@@ -57,22 +57,17 @@ void timedBlink()
     delay(1000);                       // wait for a twice a second
 }
 
-void dimmer(int freq, int duty) 
-{
-    int period, onTime, offTime;
-    period = 1000/freq;
-    onTime = period * duty / 100;
-    offTime = period - onTime;
-    digitalWrite(LED_BUILTIN, HIGH);
-    delay(onTime);
-    digitalWrite(LED_BUILTIN, LOW);
-    delay(offTime);
-}
-
 // the loop function runs over and over again forever
 void loop() 
 {
-    timedBlink();
+    for(int i = 0; i < 100; i++)
+    {
+        dimmer(10, i);
+    }
+    for(int i = 100; i > 0; i--)
+    {
+        dimmer(10, i);
+    }
 }
 
   
