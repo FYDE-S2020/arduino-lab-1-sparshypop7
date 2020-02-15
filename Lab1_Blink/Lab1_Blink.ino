@@ -62,11 +62,11 @@ void loop()
 {
     for(int i = 0; i < 100; i++)
     {
-        dimmer(10, i);
+        dimmer(100, i);
     }
     for(int i = 100; i > 0; i--)
     {
-        dimmer(10, i);
+        dimmer(100, i);
     }
 }
 
